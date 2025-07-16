@@ -40,13 +40,15 @@ const Index = () => {
               ক্যালেন্ডার
             </h2>
             
-            {/* English Calendar - Full width on mobile */}
+            {/* English Calendar - Full width */}
             <CalendarEnglish />
             
-            {/* Bengali and Arabic Calendars - Vertical list on mobile */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <CalendarBengali />
-              <CalendarArabic />
+            {/* Bengali and Arabic Calendars - Combined in single card */}
+            <div className="bg-white rounded-lg shadow-sm border p-4">
+              <div className="grid grid-cols-2 gap-4">
+                <CalendarBengali />
+                <CalendarArabic />
+              </div>
             </div>
           </div>
         </div>

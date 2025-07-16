@@ -24,20 +24,18 @@ const CalendarArabic = () => {
   const hijriDate = getHijriDate();
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border p-4">
-      <h3 className="text-lg font-semibold text-center mb-3 text-primary font-bengali">
+    <div className="text-center space-y-2 pl-4">
+      <h3 className="text-lg font-semibold text-primary font-bengali mb-3">
         আরবি ক্যালেন্ডার
       </h3>
-      <div className="text-center space-y-2">
-        <div className="text-xl font-bold text-primary font-bengali">
-          {hijriDate.day} {hijriDate.month}
-        </div>
-        <div className="text-lg text-muted-foreground font-bengali">
-          {hijriDate.year} হিজরি
-        </div>
-        <div className="text-sm text-muted-foreground font-bengali">
-          {hijriDate.dayName}
-        </div>
+      <div className="text-xl font-bold text-primary font-bengali">
+        {hijriDate.day} {hijriDate.month}
+      </div>
+      <div className="text-lg text-muted-foreground font-bengali">
+        {hijriDate.year} হিজরি
+      </div>
+      <div className="text-sm text-muted-foreground font-bengali">
+        {hijriDate.dayName}
       </div>
     </div>
   );

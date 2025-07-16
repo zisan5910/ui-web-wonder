@@ -9,8 +9,14 @@ import RealTimeClock from '../components/RealTimeClock';
 import CalendarEnglish from '../components/CalendarEnglish';
 import CalendarBengali from '../components/CalendarBengali';
 import CalendarArabic from '../components/CalendarArabic';
+import { useEffect } from 'react';
 
 const Index = () => {
+  useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-white font-bengali">
       <PWAInstallPrompt />
@@ -34,10 +40,12 @@ const Index = () => {
               ক্যালেন্ডার
             </h2>
             
-            {/* Calendar Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* English Calendar - Full width on mobile */}
+            <CalendarEnglish />
+            
+            {/* Bengali and Arabic Calendars - Vertical list on mobile */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <CalendarBengali />
-              <CalendarEnglish />
               <CalendarArabic />
             </div>
           </div>

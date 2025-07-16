@@ -1,5 +1,4 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TopNavigation from '../../components/TopNavigation';
 import BottomNavigation from '../../components/BottomNavigation';
 import SearchAndFilter from '../../components/SearchAndFilter';
@@ -8,6 +7,10 @@ import { Wrench, Phone, MapPin, Clock } from 'lucide-react';
 const Mechanic = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [filterType, setFilterType] = useState('all');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const mechanics = [
     { id: 1, name: 'মাস্টার আলী', specialty: 'গাড়ি মেকানিক', garage: 'আলী গ্যারেজ', location: 'ধুনট সদর', phone: '01711000121', experience: '২০ বছর', available: 'সকাল ৮টা - সন্ধ্যা ৬টা' },

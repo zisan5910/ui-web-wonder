@@ -1,5 +1,4 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TopNavigation from '../../components/TopNavigation';
 import BottomNavigation from '../../components/BottomNavigation';
 import SearchAndFilter from '../../components/SearchAndFilter';
@@ -8,6 +7,10 @@ import { Home, MapPin, Phone, Banknote } from 'lucide-react';
 const HouseRent = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [filterType, setFilterType] = useState('all');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const houses = [
     { id: 1, title: '২ বেডরুম ফ্ল্যাট', location: 'ধুনট সদর', rent: '৮,০০০ টাকা', type: 'ফ্ল্যাট', phone: '01711000001', details: 'পানি, গ্যাস, বিদ্যুৎ সহ' },

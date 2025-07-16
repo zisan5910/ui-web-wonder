@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TopNavigation from '../../components/TopNavigation';
 import BottomNavigation from '../../components/BottomNavigation';
 import SearchAndFilter from '../../components/SearchAndFilter';
@@ -8,6 +8,10 @@ import { ShoppingCart, Phone, MapPin, Tag } from 'lucide-react';
 const BuySell = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [filterType, setFilterType] = useState('all');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const buySellings = [
     { id: 1, name: 'নিউ মার্কেট', owner: 'আব্দুল করিম', location: 'ধুনট সদর', phone: '01711000141', type: 'পোশাক ও কাপড়', details: 'সকল ধরনের পোশাক, শাড়ি, লুঙ্গি পাওয়া যায়' },

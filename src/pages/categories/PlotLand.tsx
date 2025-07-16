@@ -1,5 +1,4 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TopNavigation from '../../components/TopNavigation';
 import BottomNavigation from '../../components/BottomNavigation';
 import SearchAndFilter from '../../components/SearchAndFilter';
@@ -8,6 +7,10 @@ import { Home, Phone, MapPin, DollarSign } from 'lucide-react';
 const PlotLand = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [filterType, setFilterType] = useState('all');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const plots = [
     { id: 1, title: '৫ কাঠা প্লট বিক্রয়', location: 'ধুনট সদর', price: '১৫ লক্ষ টাকা', owner: 'মোহাম্মদ আলী', phone: '01711000111', type: 'আবাসিক', status: 'বিক্রয়ের জন্য' },

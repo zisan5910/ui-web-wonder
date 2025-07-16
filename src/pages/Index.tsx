@@ -34,12 +34,8 @@ const Index = () => {
           {/* Real Time Clock */}
           <RealTimeClock />
           
-          {/* Calendars Section */}
+          {/* Calendars Section - Without heading */}
           <div className="px-2 space-y-4 mb-20">
-            <h2 className="text-xl font-bold text-center text-primary font-bengali mb-4">
-              ক্যালেন্ডার
-            </h2>
-            
             {/* English Calendar - Full width */}
             <CalendarEnglish />
             

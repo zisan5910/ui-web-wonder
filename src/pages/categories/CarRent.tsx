@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import TopNavigation from '../../components/TopNavigation';
 import BottomNavigation from '../../components/BottomNavigation';
@@ -9,16 +10,16 @@ const CarRent = () => {
   const [filterType, setFilterType] = useState('all');
 
   const cars = [
-    { id: 1, owner: 'মোহাম্মদ আলী', carType: 'প্রাইভেট কার', model: 'টয়োটা প্রিমিও', location: 'ধুনট সদর', phone: '01711000041', rate: '১৫০০ টাকা/দিন', availability: 'উপলব্ধ', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face' },
-    { id: 2, owner: 'রহিম উদ্দিন', carType: 'মাইক্রোবাস', model: 'হিয়াস এইচ১', location: 'ধুনট বাজার', phone: '01711000042', rate: '৪০০০ টাকা/দিন', availability: 'উপলব্ধ', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face' },
-    { id: 3, owner: 'করিম মিয়া', carType: 'অটো রিক্সা', model: 'বাজাজ অটো', location: 'ধুনট পৌরসভা', phone: '01711000043', rate: '৮০০ টাকা/দিন', availability: 'বুকড', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face' },
-    { id: 4, owner: 'ফারুক আহমেদ', carType: 'জিপ', model: 'মাহিন্দ্রা বোলেরো', location: 'ধুনট রেলস্টেশন', phone: '01711000044', rate: '২৫০০ টাকা/দিন', availability: 'উপলব্ধ', avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face' },
-    { id: 5, owner: 'নুরুল ইসলাম', carType: 'সেডান', model: 'হোন্ডা সিটি', location: 'ধুনট সদর', phone: '01711000045', rate: '২০০০ টাকা/দিন', availability: 'উপলব্ধ', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face' },
-    { id: 6, owner: 'জামাল হোসেন', carType: 'পিকআপ', model: 'টাটা এস', location: 'ধুনট বাজার', phone: '01711000046', rate: '১৮০০ টাকা/দিন', availability: 'বুকড', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face' },
-    { id: 7, owner: 'সালাম উল্লাহ', carType: 'ভ্যান', model: 'সুজুকি ভ্যান', location: 'ধুনট পৌরসভা', phone: '01711000047', rate: '১২০০ টাকা/দিন', availability: 'উপলব্ধ', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face' },
-    { id: 8, owner: 'ইকবাল হুসাইন', carType: 'এসইউভি', model: 'টয়োটা রাভ৪', location: 'ধুনট সদর', phone: '01711000048', rate: '৩৫০০ টাকা/দিন', availability: 'উপলব্ধ', avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face' },
-    { id: 9, owner: 'হাসান আলী', carType: 'হ্যাচব্যাক', model: 'মারুতি সুইফট', location: 'ধুনট রেলস্টেশন', phone: '01711000049', rate: '১৩০০ টাকা/দিন', availability: 'উপলব্ধ', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face' },
-    { id: 10, owner: 'তানভীর রহমান', carType: 'লাক্সারি', model: 'টয়োটা ক্যামরি', location: 'ধুনট বাজার', phone: '01711000050', rate: '৫০০০ টাকা/দিন', availability: 'বুকড', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face' }
+    { id: 1, owner: 'মোহাম্মদ আলী', carType: 'প্রাইভেট কার', model: 'টয়োটা প্রিমিও', location: 'ধুনট সদর', phone: '01711000041', rate: '১৫০০ টাকা/দিন', availability: 'উপলব্ধ' },
+    { id: 2, owner: 'রহিম উদ্দিন', carType: 'মাইক্রোবাস', model: 'হিয়াস এইচ১', location: 'ধুনট বাজার', phone: '01711000042', rate: '৪০০০ টাকা/দিন', availability: 'উপলব্ধ' },
+    { id: 3, owner: 'করিম মিয়া', carType: 'অটো রিক্সা', model: 'বাজাজ অটো', location: 'ধুনট পৌরসভা', phone: '01711000043', rate: '৮০০ টাকা/দিন', availability: 'বুকড' },
+    { id: 4, owner: 'ফারুক আহমেদ', carType: 'জিপ', model: 'মাহিন্দ্রা বোলেরো', location: 'ধুনট রেলস্টেশন', phone: '01711000044', rate: '২৫০০ টাকা/দিন', availability: 'উপলব্ধ' },
+    { id: 5, owner: 'নুরুল ইসলাম', carType: 'সেডান', model: 'হোন্ডা সিটি', location: 'ধুনট সদর', phone: '01711000045', rate: '২০০০ টাকা/দিন', availability: 'উপলব্ধ' },
+    { id: 6, owner: 'জামাল হোসেন', carType: 'পিকআপ', model: 'টাটা এস', location: 'ধুনট বাজার', phone: '01711000046', rate: '১৮০০ টাকা/দিন', availability: 'বুকড' },
+    { id: 7, owner: 'সালাম উল্লাহ', carType: 'ভ্যান', model: 'সুজুকি ভ্যান', location: 'ধুনট পৌরসভা', phone: '01711000047', rate: '১২০০ টাকা/দিন', availability: 'উপলব্ধ' },
+    { id: 8, owner: 'ইকবাল হুসাইন', carType: 'এসইউভি', model: 'টয়োটা রাভ৪', location: 'ধুনট সদর', phone: '01711000048', rate: '৩৫০০ টাকা/দিন', availability: 'উপলব্ধ' },
+    { id: 9, owner: 'হাসান আলী', carType: 'হ্যাচব্যাক', model: 'মারুতি সুইফট', location: 'ধুনট রেলস্টেশন', phone: '01711000049', rate: '১৩০০ টাকা/দিন', availability: 'উপলব্ধ' },
+    { id: 10, owner: 'তানভীর রহমান', carType: 'লাক্সারি', model: 'টয়োটা ক্যামরি', location: 'ধুনট বাজার', phone: '01711000050', rate: '৫০০০ টাকা/দিন', availability: 'বুকড' }
   ];
 
   const filteredCars = cars.filter(car => {
@@ -56,11 +57,9 @@ const CarRent = () => {
             {filteredCars.map((car) => (
               <div key={car.id} className="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
                 <div className="flex items-start gap-3 mb-3">
-                  <img 
-                    src={car.avatar} 
-                    alt={car.owner}
-                    className="w-16 h-16 rounded-full object-cover border-2 border-yellow-200"
-                  />
+                  <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center">
+                    <Car size={32} className="text-yellow-600" />
+                  </div>
                   <div className="flex-1">
                     <h3 className="font-semibold text-gray-800 text-base">{car.model}</h3>
                     <p className="text-sm text-yellow-600 font-medium">{car.carType}</p>

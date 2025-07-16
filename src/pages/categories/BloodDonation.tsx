@@ -10,16 +10,16 @@ const BloodDonation = () => {
   const [filterType, setFilterType] = useState('all');
 
   const donors = [
-    { id: 1, name: 'আহমেদ হাসান', bloodGroup: 'A+', location: 'ধুনট সদর', phone: '01711000031', lastDonation: '৩ মাস আগে', availability: 'সহজলভ্য', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face' },
-    { id: 2, name: 'ফারুক আহমেদ', bloodGroup: 'B+', location: 'ধুনট বাজার', phone: '01711000032', lastDonation: '৪ মাস আগে', availability: 'সহজলভ্য', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face' },
-    { id: 3, name: 'রহিম উদ্দিন', bloodGroup: 'O+', location: 'ধুনট পৌরসভা', phone: '01711000033', lastDonation: '২ মাস আগে', availability: 'সহজলভ্য', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face' },
-    { id: 4, name: 'করিম উল্লাহ', bloodGroup: 'AB+', location: 'ধুনট রেলস্টেশন', phone: '01711000034', lastDonation: '৫ মাস আগে', availability: 'সহজলভ্য', avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face' },
-    { id: 5, name: 'নুরুল আমিন', bloodGroup: 'A-', location: 'ধুনট সদর', phone: '01711000035', lastDonation: '৩ মাস আগে', availability: 'জরুরিতে', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face' },
-    { id: 6, name: 'জামাল হোসেন', bloodGroup: 'B-', location: 'ধুনট বাজার', phone: '01711000036', lastDonation: '৬ মাস আগে', availability: 'জরুরিতে', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face' },
-    { id: 7, name: 'ইকবাল হুসাইন', bloodGroup: 'O-', location: 'ধুনট পৌরসভা', phone: '01711000037', lastDonation: '৪ মাস আগে', availability: 'সহজলভ্য', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face' },
-    { id: 8, name: 'সালাম মিয়া', bloodGroup: 'AB-', location: 'ধুনট সদর', phone: '01711000038', lastDonation: '৩ মাস আগে', availability: 'জরুরিতে', avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face' },
-    { id: 9, name: 'হাসিব রহমান', bloodGroup: 'A+', location: 'ধুনট রেলস্টেশন', phone: '01711000039', lastDonation: '২ মাস আগে', availability: 'সহজলভ্য', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face' },
-    { id: 10, name: 'তানভীর আহমেদ', bloodGroup: 'O+', location: 'ধুনট বাজার', phone: '01711000040', lastDonation: '৫ মাস আগে', availability: 'সহজলভ্য', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face' }
+    { id: 1, name: 'আহমেদ হাসান', bloodGroup: 'A+', location: 'ধুনট সদর', phone: '01711000031', lastDonation: '৩ মাস আগে', availability: 'সহজলভ্য' },
+    { id: 2, name: 'ফারুক আহমেদ', bloodGroup: 'B+', location: 'ধুনট বাজার', phone: '01711000032', lastDonation: '৪ মাস আগে', availability: 'সহজলভ্য' },
+    { id: 3, name: 'রহিম উদ্দিন', bloodGroup: 'O+', location: 'ধুনট পৌরসভা', phone: '01711000033', lastDonation: '২ মাস আগে', availability: 'সহজলভ্য' },
+    { id: 4, name: 'করিম উল্লাহ', bloodGroup: 'AB+', location: 'ধুনট রেলস্টেশন', phone: '01711000034', lastDonation: '৫ মাস আগে', availability: 'সহজলভ্য' },
+    { id: 5, name: 'নুরুল আমিন', bloodGroup: 'A-', location: 'ধুনট সদর', phone: '01711000035', lastDonation: '৩ মাস আগে', availability: 'জরুরিতে' },
+    { id: 6, name: 'জামাল হোসেন', bloodGroup: 'B-', location: 'ধুনট বাজার', phone: '01711000036', lastDonation: '৬ মাস আগে', availability: 'জরুরিতে' },
+    { id: 7, name: 'ইকবাল হুসাইন', bloodGroup: 'O-', location: 'ধুনট পৌরসভা', phone: '01711000037', lastDonation: '৪ মাস আগে', availability: 'সহজলভ্য' },
+    { id: 8, name: 'সালাম মিয়া', bloodGroup: 'AB-', location: 'ধুনট সদর', phone: '01711000038', lastDonation: '৩ মাস আগে', availability: 'জরুরিতে' },
+    { id: 9, name: 'হাসিব রহমান', bloodGroup: 'A+', location: 'ধুনট রেলস্টেশন', phone: '01711000039', lastDonation: '২ মাস আগে', availability: 'সহজলভ্য' },
+    { id: 10, name: 'তানভীর আহমেদ', bloodGroup: 'O+', location: 'ধুনট বাজার', phone: '01711000040', lastDonation: '৫ মাস আগে', availability: 'সহজলভ্য' }
   ];
 
   const bloodGroupOptions = [
@@ -70,11 +70,9 @@ const BloodDonation = () => {
             {filteredDonors.map((donor) => (
               <div key={donor.id} className="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
                 <div className="flex items-start gap-3 mb-3">
-                  <img 
-                    src={donor.avatar} 
-                    alt={donor.name}
-                    className="w-16 h-16 rounded-full object-cover border-2 border-red-200"
-                  />
+                  <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
+                    <User size={32} className="text-red-600" />
+                  </div>
                   <div className="flex-1">
                     <h3 className="font-semibold text-gray-800 text-base">{donor.name}</h3>
                     <div className="flex items-center gap-2 mb-1">

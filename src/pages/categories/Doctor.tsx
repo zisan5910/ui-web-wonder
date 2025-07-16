@@ -10,16 +10,16 @@ const Doctor = () => {
   const [filterType, setFilterType] = useState('all');
 
   const doctors = [
-    { id: 1, name: 'ডা. মোহাম্মদ আলী', specialty: 'হৃদরোগ বিশেষজ্ঞ', hospital: 'ধুনট সদর হাসপাতাল', phone: '01711000001', visitTime: 'সকাল ৯টা - দুপুর ১টা', fee: '৫০০ টাকা', avatar: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=150&h=150&fit=crop&crop=face' },
-    { id: 2, name: 'ডা. রহিমা খানম', specialty: 'গাইনি বিশেষজ্ঞ', hospital: 'মা ও শিশু হাসপাতাল', phone: '01711000002', visitTime: 'বিকাল ৪টা - রাত ৮টা', fee: '৬০০ টাকা', avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=150&h=150&fit=crop&crop=face' },
-    { id: 3, name: 'ডা. করিম উদ্দিন', specialty: 'শিশু বিশেষজ্ঞ', hospital: 'শিশু হাসপাতাল', phone: '01711000003', visitTime: 'সকাল ১০টা - বিকাল ৩টা', fee: '৪৫০ টাকা', avatar: 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=150&h=150&fit=crop&crop=face' },
-    { id: 4, name: 'ডা. ফারুক আহমেদ', specialty: 'চর্মরোগ বিশেষজ্ঞ', hospital: 'স্কিন কেয়ার ক্লিনিক', phone: '01711000004', visitTime: 'সন্ধ্যা ৬টা - রাত ৯টা', fee: '৪০০ টাকা', avatar: 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=150&h=150&fit=crop&crop=face' },
-    { id: 5, name: 'ডা. নুরুল ইসলাম', specialty: 'অর্থোপেডিক সার্জন', hospital: 'বোন জয়েন্ট হাসপাতাল', phone: '01711000005', visitTime: 'সকাল ৮টা - দুপুর ১২টা', fee: '৭০০ টাকা', avatar: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=150&h=150&fit=crop&crop=face' },
-    { id: 6, name: 'ডা. সালমা বেগম', specialty: 'চোখের ডাক্তার', hospital: 'আই কেয়ার সেন্টার', phone: '01711000006', visitTime: 'বিকাল ৩টা - সন্ধ্যা ৭টা', fee: '৫৫০ টাকা', avatar: 'https://images.unsplash.com/photo-1594824804732-ca8db3daa12b?w=150&h=150&fit=crop&crop=face' },
-    { id: 7, name: 'ডা. জামাল হোসেন', specialty: 'নিউরোলজিস্ট', hospital: 'ব্রেইন কেয়ার হাসপাতাল', phone: '01711000007', visitTime: 'সকাল ১০টা - বিকাল ২টা', fee: '৮০০ টাকা', avatar: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=150&h=150&fit=crop&crop=face' },
-    { id: 8, name: 'ডা. রোকেয়া খাতুন', specialty: 'মানসিক রোগ বিশেষজ্ঞ', hospital: 'মেন্টাল হেলথ ক্লিনিক', phone: '01711000008', visitTime: 'সন্ধ্যা ৫টা - রাত ৮টা', fee: '৬৫০ টাকা', avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=150&h=150&fit=crop&crop=face' },
-    { id: 9, name: 'ডা. ইকবাল হুসাইন', specialty: 'কিডনি বিশেষজ্ঞ', hospital: 'কিডনি কেয়ার সেন্টার', phone: '01711000009', visitTime: 'সকাল ৯টা - দুপুর ১টা', fee: '৭৫০ টাকা', avatar: 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=150&h=150&fit=crop&crop=face' },
-    { id: 10, name: 'ডা. হাসান আলী', specialty: 'সাধারণ চিকিৎসক', hospital: 'জেনারেল হাসপাতাল', phone: '01711000010', visitTime: 'সকাল ৮টা - রাত ১০টা', fee: '৩০০ টাকা', avatar: 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=150&h=150&fit=crop&crop=face' }
+    { id: 1, name: 'ডা. মোহাম্মদ আলী', specialty: 'হৃদরোগ বিশেষজ্ঞ', hospital: 'ধুনট সদর হাসপাতাল', phone: '01711000001', visitTime: 'সকাল ৯টা - দুপুর ১টা', fee: '৫০০ টাকা' },
+    { id: 2, name: 'ডা. রহিমা খানম', specialty: 'গাইনি বিশেষজ্ঞ', hospital: 'মা ও শিশু হাসপাতাল', phone: '01711000002', visitTime: 'বিকাল ৪টা - রাত ৮টা', fee: '৬০০ টাকা' },
+    { id: 3, name: 'ডা. করিম উদ্দিন', specialty: 'শিশু বিশেষজ্ঞ', hospital: 'শিশু হাসপাতাল', phone: '01711000003', visitTime: 'সকাল ১০টা - বিকাল ৩টা', fee: '৪৫০ টাকা' },
+    { id: 4, name: 'ডা. ফারুক আহমেদ', specialty: 'চর্মরোগ বিশেষজ্ঞ', hospital: 'স্কিন কেয়ার ক্লিনিক', phone: '01711000004', visitTime: 'সন্ধ্যা ৬টা - রাত ৯টা', fee: '৪০০ টাকা' },
+    { id: 5, name: 'ডা. নুরুল ইসলাম', specialty: 'অর্থোপেডিক সার্জন', hospital: 'বোন জয়েন্ট হাসপাতাল', phone: '01711000005', visitTime: 'সকাল ৮টা - দুপুর ১২টা', fee: '৭০০ টাকা' },
+    { id: 6, name: 'ডা. সালমা বেগম', specialty: 'চোখের ডাক্তার', hospital: 'আই কেয়ার সেন্টার', phone: '01711000006', visitTime: 'বিকাল ৩টা - সন্ধ্যা ৭টা', fee: '৫৫০ টাকা' },
+    { id: 7, name: 'ডা. জামাল হোসেন', specialty: 'নিউরোলজিস্ট', hospital: 'ব্রেইন কেয়ার হাসপাতাল', phone: '01711000007', visitTime: 'সকাল ১০টা - বিকাল ২টা', fee: '৮০০ টাকা' },
+    { id: 8, name: 'ডা. রোকেয়া খাতুন', specialty: 'মানসিক রোগ বিশেষজ্ঞ', hospital: 'মেন্টাল হেলথ ক্লিনিক', phone: '01711000008', visitTime: 'সন্ধ্যা ৫টা - রাত ৮টা', fee: '৬৫০ টাকা' },
+    { id: 9, name: 'ডা. ইকবাল হুসাইন', specialty: 'কিডনি বিশেষজ্ঞ', hospital: 'কিডনি কেয়ার সেন্টার', phone: '01711000009', visitTime: 'সকাল ৯টা - দুপুর ১টা', fee: '৭৫০ টাকা' },
+    { id: 10, name: 'ডা. হাসান আলী', specialty: 'সাধারণ চিকিৎসক', hospital: 'জেনারেল হাসপাতাল', phone: '01711000010', visitTime: 'সকাল ৮টা - রাত ১০টা', fee: '৩০০ টাকা' }
   ];
 
   const filteredDoctors = doctors.filter(doctor => {
@@ -64,11 +64,9 @@ const Doctor = () => {
             {filteredDoctors.map((doctor) => (
               <div key={doctor.id} className="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
                 <div className="flex items-start gap-3 mb-3">
-                  <img 
-                    src={doctor.avatar} 
-                    alt={doctor.name}
-                    className="w-16 h-16 rounded-full object-cover border-2 border-blue-200"
-                  />
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                    <User size={32} className="text-blue-600" />
+                  </div>
                   <div className="flex-1">
                     <h3 className="font-semibold text-gray-800 text-base">{doctor.name}</h3>
                     <p className="text-sm text-blue-600 font-medium">{doctor.specialty}</p>

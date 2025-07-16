@@ -10,16 +10,16 @@ const Hospital = () => {
   const [filterType, setFilterType] = useState('all');
 
   const hospitals = [
-    { id: 1, name: 'ধুনট সদর হাসপাতাল', type: 'সরকারি', address: 'ধুনট সদর, বগুড়া', phone: '01711000011', emergency: '999', departments: 'জরুরি, সাধারণ চিকিৎসা', rating: 4, avatar: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=150&h=150&fit=crop' },
-    { id: 2, name: 'মা ও শিশু হাসপাতাল', type: 'বেসরকারি', address: 'ধুনট বাজার, বগুড়া', phone: '01711000012', emergency: '01711000012', departments: 'প্রসূতি, শিশু চিকিৎসা', rating: 5, avatar: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=150&h=150&fit=crop' },
-    { id: 3, name: 'শিশু হাসপাতাল', type: 'বিশেষায়িত', address: 'ধুনট পৌরসভা, বগুড়া', phone: '01711000013', emergency: '01711000013', departments: 'শিশু চিকিৎসা, টিকা', rating: 4, avatar: 'https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?w=150&h=150&fit=crop' },
-    { id: 4, name: 'আই কেয়ার সেন্টার', type: 'বিশেষায়িত', address: 'ধুনট রেলস্টেশন, বগুড়া', phone: '01711000014', emergency: '01711000014', departments: 'চোখের চিকিৎসা, অপারেশন', rating: 5, avatar: 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=150&h=150&fit=crop' },
-    { id: 5, name: 'হার্ট কেয়ার হাসপাতাল', type: 'বিশেষায়িত', address: 'ধুনট সদর, বগুড়া', phone: '01711000015', emergency: '01711000015', departments: 'হৃদরোগ, কার্ডিয়াক সার্জারি', rating: 5, avatar: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?w=150&h=150&fit=crop' },
-    { id: 6, name: 'জেনারেল হাসপাতাল', type: 'বেসরকারি', address: 'ধুনট বাজার, বগুড়া', phone: '01711000016', emergency: '01711000016', departments: 'সাধারণ চিকিৎসা, সার্জারি', rating: 3, avatar: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=150&h=150&fit=crop' },
-    { id: 7, name: 'ক্যান্সার কেয়ার সেন্টার', type: 'বিশেষায়িত', address: 'ধুনট পৌরসভা, বগুড়া', phone: '01711000017', emergency: '01711000017', departments: 'ক্যান্সার চিকিৎসা, কেমোথেরাপি', rating: 4, avatar: 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=150&h=150&fit=crop' },
-    { id: 8, name: 'অর্থো স্পেশালাইজড হাসপাতাল', type: 'বিশেষায়িত', address: 'ধুনট সদর, বগুড়া', phone: '01711000018', emergency: '01711000018', departments: 'হাড়ের চিকিৎসা, ফিজিওথেরাপি', rating: 4, avatar: 'https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?w=150&h=150&fit=crop' },
-    { id: 9, name: 'নিউরো হাসপাতাল', type: 'বিশেষায়িত', address: 'ধুনট রেলস্টেশন, বগুড়া', phone: '01711000019', emergency: '01711000019', departments: 'স্নায়ু রোগ, ব্রেইন সার্জারি', rating: 5, avatar: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=150&h=150&fit=crop' },
-    { id: 10, name: 'কিডনি কেয়ার সেন্টার', type: 'বিশেষায়িত', address: 'ধুনট বাজার, বগুড়া', phone: '01711000020', emergency: '01711000020', departments: 'কিডনি চিকিৎসা, ডায়ালাইসিস', rating: 4, avatar: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?w=150&h=150&fit=crop' }
+    { id: 1, name: 'ধুনট সদর হাসপাতাল', type: 'সরকারি', address: 'ধুনট সদর, বগুড়া', phone: '01711000011', emergency: '999', departments: 'জরুরি, সাধারণ চিকিৎসা', rating: 4 },
+    { id: 2, name: 'মা ও শিশু হাসপাতাল', type: 'বেসরকারি', address: 'ধুনট বাজার, বগুড়া', phone: '01711000012', emergency: '01711000012', departments: 'প্রসূতি, শিশু চিকিৎসা', rating: 5 },
+    { id: 3, name: 'শিশু হাসপাতাল', type: 'বিশেষায়িত', address: 'ধুনট পৌরসভা, বগুড়া', phone: '01711000013', emergency: '01711000013', departments: 'শিশু চিকিৎসা, টিকা', rating: 4 },
+    { id: 4, name: 'আই কেয়ার সেন্টার', type: 'বিশেষায়িত', address: 'ধুনট রেলস্টেশন, বগুড়া', phone: '01711000014', emergency: '01711000014', departments: 'চোখের চিকিৎসা, অপারেশন', rating: 5 },
+    { id: 5, name: 'হার্ট কেয়ার হাসপাতাল', type: 'বিশেষায়িত', address: 'ধুনট সদর, বগুড়া', phone: '01711000015', emergency: '01711000015', departments: 'হৃদরোগ, কার্ডিয়াক সার্জারি', rating: 5 },
+    { id: 6, name: 'জেনারেল হাসপাতাল', type: 'বেসরকারি', address: 'ধুনট বাজার, বগুড়া', phone: '01711000016', emergency: '01711000016', departments: 'সাধারণ চিকিৎসা, সার্জারি', rating: 3 },
+    { id: 7, name: 'ক্যান্সার কেয়ার সেন্টার', type: 'বিশেষায়িত', address: 'ধুনট পৌরসভা, বগুড়া', phone: '01711000017', emergency: '01711000017', departments: 'ক্যান্সার চিকিৎসা, কেমোথেরাপি', rating: 4 },
+    { id: 8, name: 'অর্থো স্পেশালাইজড হাসপাতাল', type: 'বিশেষায়িত', address: 'ধুনট সদর, বগুড়া', phone: '01711000018', emergency: '01711000018', departments: 'হাড়ের চিকিৎসা, ফিজিওথেরাপি', rating: 4 },
+    { id: 9, name: 'নিউরো হাসপাতাল', type: 'বিশেষায়িত', address: 'ধুনট রেলস্টেশন, বগুড়া', phone: '01711000019', emergency: '01711000019', departments: 'স্নায়ু রোগ, ব্রেইন সার্জারি', rating: 5 },
+    { id: 10, name: 'কিডনি কেয়ার সেন্টার', type: 'বিশেষায়িত', address: 'ধুনট বাজার, বগুড়া', phone: '01711000020', emergency: '01711000020', departments: 'কিডনি চিকিৎসা, ডায়ালাইসিস', rating: 4 }
   ];
 
   const filteredHospitals = hospitals.filter(hospital => {
@@ -63,11 +63,9 @@ const Hospital = () => {
             {filteredHospitals.map((hospital) => (
               <div key={hospital.id} className="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
                 <div className="flex items-start gap-3 mb-3">
-                  <img 
-                    src={hospital.avatar} 
-                    alt={hospital.name}
-                    className="w-16 h-16 rounded-lg object-cover border-2 border-red-200"
-                  />
+                  <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center">
+                    <Building2 size={32} className="text-red-600" />
+                  </div>
                   <div className="flex-1">
                     <h3 className="font-semibold text-gray-800 text-base">{hospital.name}</h3>
                     <div className="flex items-center gap-2 mb-1">

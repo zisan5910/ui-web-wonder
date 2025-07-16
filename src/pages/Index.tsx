@@ -4,10 +4,12 @@ import BottomNavigation from '../components/BottomNavigation';
 import BannerSlider from '../components/BannerSlider';
 import NoticeMarquee from '../components/NoticeMarquee';
 import ServiceGrid from '../components/ServiceGrid';
+import PWAInstallPrompt from '../components/PWAInstallPrompt';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-white font-bengali">
+      <PWAInstallPrompt />
       <TopNavigation />
       
       {/* Main Content */}

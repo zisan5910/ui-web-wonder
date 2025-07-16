@@ -24,18 +24,20 @@ const CalendarBengali = () => {
   const bengaliDate = getBengaliDate();
 
   return (
-    <div className="text-center space-y-2 border-r pr-4">
-      <h3 className="text-lg font-semibold text-primary font-bengali mb-3">
+    <div className="bg-white rounded-lg shadow-sm border p-4">
+      <h3 className="text-lg font-semibold text-center mb-3 text-primary font-bengali">
         বাংলা ক্যালেন্ডার
       </h3>
-      <div className="text-xl font-bold text-primary font-bengali">
-        {bengaliDate.day} {bengaliDate.month}
-      </div>
-      <div className="text-lg text-muted-foreground font-bengali">
-        {bengaliDate.year} বঙ্গাব্দ
-      </div>
-      <div className="text-sm text-muted-foreground font-bengali">
-        {bengaliDate.dayName}বার
+      <div className="text-center space-y-2">
+        <div className="text-xl font-bold text-primary font-bengali">
+          {bengaliDate.day} {bengaliDate.month}
+        </div>
+        <div className="text-lg text-muted-foreground font-bengali">
+          {bengaliDate.year} বঙ্গাব্দ
+        </div>
+        <div className="text-sm text-muted-foreground font-bengali">
+          {bengaliDate.dayName}বার
+        </div>
       </div>
     </div>
   );

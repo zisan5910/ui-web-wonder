@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useState } from 'react';
 import TopNavigation from '../../components/TopNavigation';
 import BottomNavigation from '../../components/BottomNavigation';
 import SearchAndFilter from '../../components/SearchAndFilter';
@@ -7,10 +8,6 @@ import { Scale, Phone, MapPin, Clock } from 'lucide-react';
 const Lawyer = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [filterType, setFilterType] = useState('all');
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const lawyers = [
     { id: 1, name: 'ব্যারিস্টার মোহাম্মদ আলী', specialization: 'ফৌজদারি আইন', chamber: 'ধুনট কোর্ট', phone: '01711000061', experience: '১৫ বছর', consultation: '৫০০ টাকা' },

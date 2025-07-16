@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useState } from 'react';
 import TopNavigation from '../../components/TopNavigation';
 import BottomNavigation from '../../components/BottomNavigation';
 import SearchAndFilter from '../../components/SearchAndFilter';
@@ -7,10 +8,6 @@ import { TreePine, Phone, MapPin, Leaf } from 'lucide-react';
 const Nursery = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [filterType, setFilterType] = useState('all');
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const nurseries = [
     { id: 1, name: 'গ্রিন গার্ডেন নার্সারি', owner: 'মোহাম্মদ আলী', location: 'ধুনট সদর', phone: '01711000131', speciality: 'ফুলের চারা, সবজির বীজ', established: '২০১০' },

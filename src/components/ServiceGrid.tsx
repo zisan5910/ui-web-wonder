@@ -1,14 +1,8 @@
 
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
 
 const ServiceGrid = () => {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    // Scroll to top when component mounts
-    window.scrollTo(0, 0);
-  }, []);
 
   const services = [
     { id: 'doctor', name: 'ডাক্তার', icon: '👨‍⚕️', color: 'bg-blue-50 text-blue-600' },
@@ -50,18 +44,6 @@ const ServiceGrid = () => {
   ];
 
   const handleServiceClick = (serviceId: string) => {
-    // Handle external redirects
-    if (serviceId === 'buy-sell') {
-      window.open('https://netlistore.netlify.app', '_blank');
-      return;
-    }
-    
-    if (serviceId === 'website') {
-      window.open('https://ridoan-zisan.netlify.app', '_blank');
-      return;
-    }
-    
-    // Navigate to category page
     navigate(`/category/${serviceId}`);
   };
 

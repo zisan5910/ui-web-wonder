@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import TopNavigation from '../../components/TopNavigation';
 import BottomNavigation from '../../components/BottomNavigation';
 import SearchAndFilter from '../../components/SearchAndFilter';
@@ -8,10 +8,6 @@ import { Globe, Phone, MapPin, ExternalLink } from 'lucide-react';
 const Website = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [filterType, setFilterType] = useState('all');
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const websites = [
     { id: 1, name: 'ধুনট সরকারি ওয়েবসাইট', admin: 'উপজেলা নির্বাহী কর্মকর্তা', url: 'dhunat.bogura.gov.bd', phone: '01711000201', type: 'সরকারি', description: 'উপজেলার সকল সরকারি তথ্য ও সেবা' },

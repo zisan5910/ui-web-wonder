@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useState } from 'react';
 import TopNavigation from '../../components/TopNavigation';
 import BottomNavigation from '../../components/BottomNavigation';
 import SearchAndFilter from '../../components/SearchAndFilter';
@@ -7,10 +8,6 @@ import { Shield, Phone, MapPin, Clock } from 'lucide-react';
 const Police = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [filterType, setFilterType] = useState('all');
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const policeStations = [
     { id: 1, name: 'ধুনট থানা', officer: 'এসআই মোহাম্মদ আলী', address: 'ধুনট সদর, বগুড়া', phone: '01711000051', emergency: '999', hours: '২৪ ঘন্টা' },

@@ -9,14 +9,8 @@ import RealTimeClock from '../components/RealTimeClock';
 import CalendarEnglish from '../components/CalendarEnglish';
 import CalendarBengali from '../components/CalendarBengali';
 import CalendarArabic from '../components/CalendarArabic';
-import { useEffect } from 'react';
 
 const Index = () => {
-  useEffect(() => {
-    // Scroll to top when component mounts
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <div className="min-h-screen bg-white font-bengali">
       <PWAInstallPrompt />
@@ -34,17 +28,17 @@ const Index = () => {
           {/* Real Time Clock */}
           <RealTimeClock />
           
-          {/* Calendars Section - Without heading */}
+          {/* Calendars Section */}
           <div className="px-2 space-y-4 mb-20">
-            {/* English Calendar - Full width */}
-            <CalendarEnglish />
+            <h2 className="text-xl font-bold text-center text-primary font-bengali mb-4">
+              ক্যালেন্ডার
+            </h2>
             
-            {/* Bengali and Arabic Calendars - Combined in single card */}
-            <div className="bg-white rounded-lg shadow-sm border p-4">
-              <div className="grid grid-cols-2 gap-4">
-                <CalendarBengali />
-                <CalendarArabic />
-              </div>
+            {/* Calendar Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <CalendarBengali />
+              <CalendarEnglish />
+              <CalendarArabic />
             </div>
           </div>
         </div>

@@ -48,27 +48,27 @@ const ProductCard = ({
         </div>
         
         <div className="flex items-center justify-between flex-shrink-0">
-          <div className="flex items-center space-x-1">
+          <div className="flex items-center gap-1">
             <button
               onClick={() => onToggleWishlist?.(product.id)}
-              className={`p-2 rounded-full w-8 h-8 flex items-center justify-center ${
+              className={`p-1.5 rounded-full w-7 h-7 flex items-center justify-center transition-colors ${
                 isInWishlist 
                   ? 'bg-destructive/10 text-destructive' 
-                  : 'bg-muted text-muted-foreground'
+                  : 'bg-muted text-muted-foreground hover:bg-muted/80'
               }`}
             >
-              <Heart size={14} fill={isInWishlist ? 'currentColor' : 'none'} />
+              <Heart size={12} fill={isInWishlist ? 'currentColor' : 'none'} />
             </button>
             
             <button
               onClick={() => onAddToCart?.(product.id)}
-              className="p-2 bg-muted text-muted-foreground hover:text-primary rounded-full w-8 h-8 flex items-center justify-center"
+              className="p-1.5 bg-muted text-muted-foreground hover:text-primary hover:bg-muted/80 rounded-full w-7 h-7 flex items-center justify-center transition-colors"
             >
-              <ShoppingCart size={14} />
+              <ShoppingCart size={12} />
             </button>
           </div>
           
-          <span className={`text-xs px-2 py-1 rounded-full ${
+          <span className={`text-xs px-2 py-0.5 rounded-full text-center leading-tight ${
             product.stock > 0 
               ? 'bg-accent/10 text-accent' 
               : 'bg-destructive/10 text-destructive'
@@ -79,7 +79,7 @@ const ProductCard = ({
         
         <button 
           onClick={handleOrderCall}
-          className="order-btn mt-auto"
+          className="w-full py-2.5 bg-primary text-primary-foreground rounded-lg text-xs font-semibold hover:bg-primary/90 transition-colors mt-auto"
         >
           অর্ডার করুন
         </button>

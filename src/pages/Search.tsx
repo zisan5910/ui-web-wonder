@@ -7,7 +7,7 @@ import { products, categories } from '@/data/products';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
 
 const Search = () => {
-  const [showFilters, setShowFilters] = useState(false);
+  const [showFilters, setShowFilters] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
   const [priceRange, setPriceRange] = useState({ min: 0, max: 100000 });
